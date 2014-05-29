@@ -1,0 +1,104 @@
+Diseño y Programación Orientados a Objetos
+1er. Sem 2014
+Tarea 2: Simulación Gráfica de Bolas, Puntos fijos, y Resortes como Objetos de Software
+
+Instalación de Java en su ordenador:
+===================================
+Entrar en el siguiente link, descargar la versión que le corresponda y leer las instrucciiones que proporciona la misma página:
+https://www.java.com/es/download/manual.jsp?locale=es
+En caso que el link no esté disponible, ustede debe entrar en el siguiente sitio web y leer buscar la descarga que le corresponda a su sistema operativo.
+http://www.java.com/
+===============================================================
+
+1.- Integrantes:
+    ============
+
+	Matias Lacasia
+	Carlos Polanco
+	Daniel Veas
+
+2.- Carpetas:
+	========
+	
+	A continuación se detalla como estan compuestos los archivos de la tarea: Cada Etapa a pesar de ser varias veces incremental, se fue
+	agregando a carpetas separadas para ver la progresión realizada, se adjunta la documentacion con los graficos logrados en cada caso,
+	ademas de las dificultades encontradas al programar. Cada carpeta contiene su propio archivo makefile para hacer correr la tarea.
+
+	Tarea 2 POO\
+		Etapa 4\
+			Ball.java
+			BallView.java
+			FixedHook.java
+			FixedHookView.java
+			LabMenuListener.java
+			MouseListener.java
+			MyWorld.java
+			MyWorldView.java
+			PhysicsElements.java
+			PhysicsLab.java
+			Simulateable.java
+			Spring.java
+			SpringAttachable.java
+			SpringView.java
+			makefile
+		README
+		Documentacion.pdf
+		
+	A continuación se explicará cada uno:
+	
+		Ball.java: Clase que crea las bolas que se usaran en MyWorld
+		BallView.java: Clase que crea la vista y parte grafica del las Bolas
+		FixedHook.java: Clase que crea los puntos fijos que se usaran en MyWorld
+		FixedHookView.java: Clase que crea la vista y parte grafica de los puntos fijos.
+		Spring.java: Clase que crea los resortes que se usaran en MyWorld.
+		SpringView.java: Class que crea la vista y parte grafica de los resortes.
+		MyWorld.java: Clase que crea el mundo donde se simulan todos los elementos fisicos.
+		MyWorldView.java: Clase que crea la vista y part grafica de MyWorld y los elementos fisicos.
+		PhysicsElements.java: Clase abstracta que se usa para poder extenderla a los distintos elementos con que se trabaja.
+		LabMenuListener.java: Clase que implementa el Menu con los diferentes eventos.
+		MouseListener.java: Clase que implementa el Mouse con los diferentes eventos.
+		PhysicsLab.java: Clase principal con el main, donde se juntan los codigos para generar la simulacion.
+		Simulateable.java: Interfaz que debe ser implementada en los elementos que interactuan y cambian sus estados.
+		SpringAttachable.java: Interfaz que debe implementarse a todos los elementos que se unen con un Spring.
+		makefile: Archivo que sirve para compilar y correr el programa de forma comoda y rapida.
+		README: Archivo de Texto que contiene cosas importantes y necesarias antes de correr el codigo.
+		Documentacion: Archivo de Texto que posee el diagrama de flujo y los problemas generados en el proceso.
+
+3.- Etapa 4:
+	=======
+
+	Luego de haber pasado por varias etapas en donde el nivel de dificultad fue aumentando, nos encontramos en la etapa 4 en donde debemos agregar los elementos desde un menu, 
+	y poder mover los objetos con el mouse y engancharlos a un spring y asi poder realizar la simulacion que estimemos conveniente.
+
+4.- Otros:
+	=====
+	
+	Para poder compilar y ejecutar los archivos presentados en esta tarea es necesario tener instalado una versión reciente de 
+	Java Development Kit (JDK 1.7)
+	
+5.- Compilacion y ejecucion:
+    ========================
+	
+	Para compilar todos los archivos .java, en la de la carpeta de la etapa correspondiente se debe ejecutar el siguiente comando por terminal: $ make
+	Desde el makefile se puede ejecutar usando: $make run
+	El cual hace uso del makefile, compilando y ejecutando el programa
+	
+	Existe otra forma que es ingresando los siguientes comandos por terminal:
+	$javac PhysicsLab.java // compilacion
+	$java PhysicsLab // ejecucion
+
+
+6.- Javadoc
+   =======
+    Se crearon comentarios estilo Javadoc para una mejor lectura, las clases con Javadoc son MyWorld.Java, Ball.java y BallView.Java como se especificaba en la tarea.
+	Para generar los Javadoc correspondientes ejecutar por terminal el comando:
+
+	$make doc
+
+7.- Resultados:
+   ===========
+
+	El resultado al ejecutar este programa se mostrara una interfaz grafica en donde podremos escoger los elementos desde un menu, 
+	y con el puntero del mouse y presionando el boton primario de este, podremos mover los objetos y engancharlos a los springs
+
+
